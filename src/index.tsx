@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Router, Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
-// import routes from './router/index'
+import { createBrowserHistory } from 'history'
 import reportWebVitals from './reportWebVitals';
 import Home from './views/home/home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={BrowserRouter}>
+    <Router history={createBrowserHistory()}>
       <Route path="/" component={App}>
         <Route path="home" component={Home} />
       </Route>
