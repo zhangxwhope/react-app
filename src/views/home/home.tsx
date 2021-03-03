@@ -1,4 +1,6 @@
 
+import './home.css'
+
 function Home () {
   const homeSrc: string = ''
   

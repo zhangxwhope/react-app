@@ -2,11 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Router, Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+// import routes from './router/index'
 import reportWebVitals from './reportWebVitals';
+import Home from './views/home/home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={BrowserRouter}>
+      <Route path="/" component={App}>
+        <Route path="home" component={Home} />
+      </Route>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
